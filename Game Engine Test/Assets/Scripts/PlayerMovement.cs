@@ -40,9 +40,13 @@ public class PlayerMovement : MonoBehaviour
         air
     }
 
+    public Sounds sound;
+
     // Start is called before the first frame update
     private void Start()
     {
+        sound=GameObject.Find("AudioEffects").GetComponent<Sounds>();
+
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
 
@@ -128,6 +132,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
+        sound.soundJump();
         // reset y velocity
         rb.velocity = new Vector3(rb.velocity.x, 0f, rb.velocity.z);
 
