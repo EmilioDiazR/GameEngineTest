@@ -29,7 +29,7 @@ public class AnimationKeys : MonoBehaviour
             Npc.RunOff();
         }
 
-        if(Input.GetKeyDown("space")){
+        if(Input.GetKey("space")){
             Npc.Jump();
             Debug.Log("space key was pressed");
         }else{
