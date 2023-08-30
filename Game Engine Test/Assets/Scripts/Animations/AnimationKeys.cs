@@ -5,35 +5,48 @@ using UnityEngine;
 
 public class AnimationKeys : MonoBehaviour
 {
-    public AnimationPlayer Npc;
+    
+    public Animator Animacion;
     // Start is called before the first frame update
     void Start()
     {
-        Npc=GameObject.Find("Paladin").GetComponent<AnimationPlayer>();
+        Animacion = gameObject.GetComponent<Animator>();
+        //Npc=GameObject.Find("Paladin").GetComponent<AnimationPlayer>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(Input.GetKey("w")){
-            Npc.Walk();
+
+            Animacion.SetBool("Walk", true);
             Debug.Log("w key was pressed");
+
         }else{
-            Npc.WalkOff();
+
+            Animacion.SetBool("Walk", false);
         }
 
         if(Input.GetKey("s")){
-            Npc.Run();
+
+            Animacion.SetBool("Run", true);
             Debug.Log("s key was pressed");
+
         }else{
-            Npc.RunOff();
+           
+            Animacion.SetBool("Run", false);
+
         }
 
         if(Input.GetKey("space")){
-            Npc.Jump();
+           
+            Animacion.SetBool("Jump", true);
             Debug.Log("space key was pressed");
+
         }else{
-            Npc.JumpOff();
+           
+            Animacion.SetBool("Jump", false);
+
         }
     }
 }
