@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO.Pipes;
 using UnityEngine;
+
 /// <summary> 
 /// Controla las animaciones del modelo por medio de Keys del teclado.
 /// </summary> 
 public class AnimationKeys : MonoBehaviour
 {
+    
     /// <summary> 
     /// Pide el animator que contiene las animaciones creadas.
     /// </summary> 
