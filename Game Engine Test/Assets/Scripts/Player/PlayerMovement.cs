@@ -11,41 +11,41 @@ public class PlayerMovement : MonoBehaviour
     // Valor para la velocidad del movimiento.
     private float moveSpeed;
     // Valor para la velocidad al caminar.
-    public float walkSpeed;
+    private float walkSpeed = 7;
     // Valor para la velocidad de correr.
-    public float strintSpeed;
+    private float strintSpeed = 14;
 
     // Valor para la fricción de los movimientos del jugado en el suelo.
-    public float groundDrag;
+    private float groundDrag = 10;
 
     // Valor para la fuerza de salto.
-    public float jumpForce;
+    private float jumpForce = 8;
     // Valor para el reseteo del salto.
-    public float jumpCooldown;
+    private float jumpCooldown = 0.25f;
     // Valor del salto en el aire.
-    public float airMultiplier;
+    private float airMultiplier = 0.4f;
     // Estado del salto.
-    bool readyToJump;
+    private bool readyToJump;
 
     /// <summary>
     /// Asigna las teclas que ejecute el salto y el correr.
     /// </summary>
     [Header("Keybinds")]
     // Tecla space para saltar.
-    public KeyCode jumpKey = KeyCode.Space;
+    private KeyCode jumpKey = KeyCode.Space;
     // Tecla LeftShift para correr.
-    public KeyCode strintKey = KeyCode.LeftShift;
+    private KeyCode strintKey = KeyCode.LeftShift;
 
     /// <summary>
     /// Asigna un valor para el suelo.
     /// </summary>
     [Header("Ground Check")]
     // Valor para el peso del jugador.
-    public float playerHeight;
+    private float playerHeight = 2;
     // Valor para el suelo.
     public LayerMask whatIsGround;
     // Estado del suelo.
-    bool grounded;
+    private bool grounded;
 
     /// <summary>
     /// Orientación del jugador.
@@ -53,9 +53,9 @@ public class PlayerMovement : MonoBehaviour
     // Valor para la orientaciónd el jugador.
     public Transform orientation;
     // Valor del movimiento del jugador en Horizontal.
-    float horizontalInput;
+    private float horizontalInput;
     // Valor del movimiento del jugador en Vertical.
-    float verticalInput;
+    private float verticalInput;
 
     // Dirección de movimiento para el jugador.
     Vector3 moveDirection;
@@ -65,8 +65,8 @@ public class PlayerMovement : MonoBehaviour
     /// <summary>
     /// Asignan digerentes estados para el jugador.
     /// </summary>
-    public MovementState State;
-    public enum MovementState {
+    private MovementState State;
+    private enum MovementState {
         // Estado para caminar.
         walking,
         // Estado para correr.
@@ -75,7 +75,7 @@ public class PlayerMovement : MonoBehaviour
         air
     }
     //Asigna un valor para la invoar funciones de otro script.
-    public Sounds sound;
+    private Sounds sound;
 
     /// <summary>
     /// Activa los valores asigandos para movimiento del jugador y los sonidos.

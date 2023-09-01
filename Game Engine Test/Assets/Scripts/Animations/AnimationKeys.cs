@@ -12,7 +12,7 @@ public class AnimationKeys : MonoBehaviour
     /// <summary> 
     /// Pide el animator que contiene las animaciones creadas.
     /// </summary> 
-    public Animator Animacion;
+    private Animator Animacion;
     
     /// <summary> 
     /// Inicia con las condiciones necesarias para las animaciones.

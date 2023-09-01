@@ -11,15 +11,15 @@ public class PlayerCam : MonoBehaviour
     /// Se asignan los valores para la rotación de la camara.
     /// </summary>
     // sensX es el valor de la sensibilidad en X.
-    public float sensX;
+    private float sensX = 400;
     // sensY es el valor de la sensibilidad en Y.
-    public float sensY;
+    private float sensY = 400;
     // orientation pedirá la orientación donde el jugador podrá mover la camara. 
     public Transform orientation;
     //xRotation es el valor en rotación en X.
-    float xRotation;
+    private float xRotation;
     //yRotation es el valor en rotación en Y.
-    float yRotation;
+    private float yRotation;
 
     /// <summary>
     /// Activa los valores asigandos para el cursor.

@@ -14,10 +14,15 @@ public class Score : MonoBehaviour
     /// </summary>
     // instance es un valor publico estatico que se usará para ser invocado en otro script.
     public static Score instance;
+    
     // scoreText pide el texto donde se mostrara la cantidad de monedas obtenidas.
     public TextMeshProUGUI scoreText;
     // score es el valor entero que acumulará las monedas.
-    public int score = 0;
+    private int score = 0;
+    public int ScorePriv {
+        get{return score; }
+        set{score = value;}
+    }
     /// <summary>
     /// Función que instancia el valor.
     /// </summary>

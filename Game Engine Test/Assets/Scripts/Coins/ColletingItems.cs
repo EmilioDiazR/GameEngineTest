@@ -11,12 +11,10 @@ public class ColletingItems : MonoBehaviour
     /// <summary> 
     /// Asigna los valores enteros para las monedas y un valor para el audio.
     /// </summary> 
-    // Asigna un valor entero para las monedas.
-    public int coins;
     // scoreWin es el valor entero que se requiere para ganar el juego.
-    int scoreWin = 4;
+    private int scoreWin = 4;
     //sound es en valor que agarra del script sound para invocar otras funciones.
-    public Sounds sound;
+    private Sounds sound;
     
     /// <summary> 
     /// Al iniciar, agarra los valores asignados para el codigo.
@@ -40,7 +38,7 @@ public class ColletingItems : MonoBehaviour
         }
 
         //Si la cantidad acumulada del score es mayor o igual al valor de scoreWin, ejecutara el sonido de victoria.
-        if (Score.instance.score >= scoreWin){
+        if (Score.instance.ScorePriv >= scoreWin){
             sound.soundWin();
         }
     }
